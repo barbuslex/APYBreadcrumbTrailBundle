@@ -25,7 +25,7 @@
         "symfony/phpunit-bridge": "^5.0|^6.0|^7.0",
         "nyholm/symfony-bundle-test": "^v2.0|^v3.0",
         "matthiasnoback/symfony-dependency-injection-test": "^4.0",
-        "doctrine/doctrine-bundle": "^v1.0|^v2.0",
+        "doctrine/doctrine-bundle": "^v1.8|^v2.0",
         "doctrine/annotations": "^1.0|^2.0",
         "symfony/twig-bundle": "^4.0|^5.0|^6.0|^7.0"
     },

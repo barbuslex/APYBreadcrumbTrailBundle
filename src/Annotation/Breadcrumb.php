@@ -61,15 +61,8 @@ class Breadcrumb
      * @param ?string              $template
      * @param array                $attributes
      */
-    public function __construct(
-        $title = null,
-        $routeName = null,
-        $routeParameters = null,
-        $routeAbsolute = null,
-        $position = null,
-        $template = null,
-        $attributes = null,
-    ) {
+    public function __construct($title = null, $routeName = null, $routeParameters = null, $routeAbsolute = null, $position = null, $template = null, $attributes = null)
+    {
         $data = [];
 
         if (\is_string($title)) {

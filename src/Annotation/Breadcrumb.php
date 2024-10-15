@@ -68,7 +68,7 @@ class Breadcrumb
         $routeAbsolute = null,
         $position = null,
         $template = null,
-        $attributes = null,
+        $attributes = null
     ) {
         $data = [];
 

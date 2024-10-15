@@ -70,7 +70,7 @@ class Trail implements \IteratorAggregate, \Countable
      *
      * @return self
      *
-     *@throws \InvalidArgumentException
+     * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */
     public function add($breadcrumbOrTitle, $routeName = null, $routeParameters = [], $routeAbsolute = true, $position = 0, $attributes = [])

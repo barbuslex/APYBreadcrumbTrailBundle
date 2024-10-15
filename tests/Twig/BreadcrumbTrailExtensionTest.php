@@ -36,8 +36,7 @@ class BreadcrumbTrailExtensionTest extends KernelTestCase
     {
         if(method_exists($this, 'getContainer')) {
             $container = self::getContainer();
-        }
-        else {
+        } else {
             self::bootKernel();
             $container = self::$container;
         }

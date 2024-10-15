@@ -55,7 +55,7 @@ class BreadcrumbListener
     {
         $controller = $event->getController();
 
-        $reflectableClass = \is_array($controller) ? $controller[0] : \get_class($controller);
+        $reflectableClass = \is_array($controller) ? $controller[0] : $controller::class;
         $reflectableMethod = \is_array($controller) ? $controller[1] : '__invoke';
 
         // Annotations from class

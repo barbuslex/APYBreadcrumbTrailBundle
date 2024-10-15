@@ -34,7 +34,7 @@ class BreadcrumbTrailExtensionTest extends KernelTestCase
      */
     public function testTwigFunctionGetsRegistered()
     {
-        $container = static::getContainer();
+        $container = defined('self::$container') ? self::$container : self::getContainer();
 
         /** @var BreadcrumbTrailExtension $extension */
         $extension = $container->get(BreadcrumbTrailExtension::class);

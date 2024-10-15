@@ -17,6 +17,7 @@ use APY\BreadcrumbTrailBundle\BreadcrumbTrail\Trail;
 use APY\BreadcrumbTrailBundle\MixedAnnotationWithAttributeBreadcrumbsException;
 use Doctrine\Common\Annotations\Reader;
 use Symfony\Component\HttpKernel\Event\KernelEvent;
+use Symfony\Component\HttpKernel\HttpKernel;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 class BreadcrumbListener
@@ -70,7 +71,7 @@ class BreadcrumbListener
             throw new \InvalidArgumentException(sprintf('Annotations from class "%s" cannot be read as it is abstract.', $class));
         }
 
-        $kernelRequest = defined('HttpKernelInterface::MASTER_REQUEST') ? HttpKernelInterface::MASTER_REQUEST : HttpKernelInterface::MAIN_REQUEST;
+        $kernelRequest = defined(HttpKernelInterface::class.'::MASTER_REQUEST') ? HttpKernelInterface::MASTER_REQUEST : HttpKernelInterface::MAIN_REQUEST;
 
         if ($kernelRequest == $event->getRequestType()) {
             $this->breadcrumbTrail->reset();
